@@ -7,7 +7,6 @@ var read = fs.readFileSync(toRead).toString();
 var s = read.split('\r\n')
 
 console.log(s);
-var font;
 
 const dothis = string => { 
     if (string.startsWith('h1-color')) {
