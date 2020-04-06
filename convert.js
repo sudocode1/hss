@@ -1,5 +1,4 @@
 const fs = require("fs");
-const mam = require("more-array-methods");
 var toRead = "./index.hss";
 
 
