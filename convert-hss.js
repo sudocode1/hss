@@ -27,9 +27,7 @@ const dothis = string => {
 	} else if(string.startsWith("line-through")) {
 		return `body\n{\ntext-decoration: line-through;\n}`;
     } else if(string.startsWith("underline")) {
-		return `body\n{\ntext-decoration: underline;\n}`;
-    } else if(string.startsWith("none")) {
-		return `body\n{\ntext-decoration: none;\n}`;		
+		return `body\n{\ntext-decoration: underline;\n}`;		
     } else if(string.startsWith("bg-image")) {
         return `body\n{\nbackground-image: ./${string.slice(9)}\n`; 
     } else if(string.startsWith("bg-color")) {
