@@ -22,9 +22,11 @@ const dothis = string => {
         return `body\n{\ntext-align: left;\n}`;
     } else if(string.startsWith("right")) {
         return `body\n{\ntext-align: right;\n}`;
-    } else if(string.startsWith("bg")) {
-        return `body\n{\nbackground-image: ./${string.slice(3);\n}`; 
-
+    } else if(string.startsWith("bg-image")) {
+        return `body\n{\nbackground-image: ./${string.slice(9)}\n`; 
+    } else if(string.startsWith("bg-color")) {
+        return `body\n{\nbackground-color: ${string.slice(9)}\n`; 
+    }
 };
 
 fs.writeFileSync("styles.css", "/*built with hss*/\n" + s.map(dothis).join('\n'));
