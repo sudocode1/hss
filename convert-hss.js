@@ -20,7 +20,9 @@ const dothis = string => {
         return `pre\n{\nheight: ${string.slice(11)}px\n}`;
     } else if(string.startsWith("left")) {
         return `body\n{\ntext-align: left;\n}`;
-    
+    } else if(string.startsWith("right")) {
+        return `body\n{\ntext-align: right;\n}`;
+    } 
 };
 
 fs.writeFileSync("styles.css", "/*built with hss*/\n" + s.map(dothis).join('\n'));
