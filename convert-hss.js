@@ -18,7 +18,9 @@ const dothis = string => {
         return `body\n{\ntext-align: center;\n}`;
     } else if(string.startsWith("pre-height")) {
         return `pre\n{\nheight: ${string.slice(11)}px\n}`;
-
+    } else if(string.startsWith("left")) {
+        return `body\n{\ntext-align: left;\n}`;
+    
 };
 
 fs.writeFileSync("styles.css", "/*built with hss*/\n" + s.map(dothis).join('\n'));
