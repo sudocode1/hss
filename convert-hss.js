@@ -16,7 +16,8 @@ const dothis = string => {
         return `body {\nfont-family: ${string.slice(5)};\n}`;
     } else if(string.startsWith("center")) {
         return `body\n{\ntext-align: center;\n}`;
-    }
+    } else if(string.startsWith("pre")) {
+        return `pre\n{\nheight: ${string.slice(4)}px\n}`;
 
 };
 
