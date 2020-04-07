@@ -28,6 +28,12 @@ const dothis = string => {
 	return `body\n{\ntext-decoration: line-through;\n}`;
     } else if(string.startsWith("underline")) {
 	return `body\n{\ntext-decoration: underline;\n}`;
+    } else if(string.startsWith("uppercase")) {
+	return `body\n{\ntext-transform: uppercase;\n}`;
+    } else if(string.startsWith("lowercase")) {
+	return `body\n{\ntext-transform: lowercase;\n}`;
+    } else if(string.startsWith("capitalize")) {
+	return `body\n{\ntext-transform: capitalize;\n}`;
     } else if(string.startsWith("bg-image")) {
         return `body\n{\nbackground-image: ./${string.slice(9)}\n`; 
     } else if(string.startsWith("bg-color")) {
