@@ -1,2 +1,2 @@
-# hss
-simple css made for hylight projects
+# HSS
+Simple CSS made for Hylight projects.
